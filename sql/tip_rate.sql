@@ -1,12 +1,3 @@
--- Created cleaned VIEW that reflected cleaning data conditions
-CREATE OR REPLACE VIEW famous-cache-463121-g6.nyc_taxi.vw_cleaned AS
-  SELECT
-    *
-  FROM bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2022
-  WHERE fare_amount BETWEEN 1 AND 200 
-      AND trip_distance > 0
-      AND tip_amount >= 0;
-
 -- Analyze average tips, total amount and total length by day of the week and hour
 SELECT
   EXTRACT(DAYOFWEEK FROM pickup_datetime) AS dow, -- 1= Sunday, ... 6= Saturday
