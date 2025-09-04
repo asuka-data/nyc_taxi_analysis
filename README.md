@@ -10,6 +10,7 @@ By analyzing NYC taxi data, I will suggest the way to improve revenues.
 - total rows: 36,256,539
 
 ## Cleaning Rules
-- fare_amount < 1 and fare_amount > 200 :Invalid data
+- fare_amount < 1 and fare_amount > 200 : Invalid data
 - trip_distance = 0 : No actual trip
-- tip-amount < 0 : Input error 
+- tip-amount < 0 : Input error
+  
