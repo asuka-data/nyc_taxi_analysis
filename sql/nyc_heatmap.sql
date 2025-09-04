@@ -20,25 +20,24 @@ CREATE OR REPLACE VIEW famous-cache-463121-g6.nyc_taxi.vw_cleaned AS
       AND trip_distance > 0
       AND tip_amount >= 0;
 
--- Analyze average tips, total amount and total length by day of the week and hour
-SELECT
-  EXTRACT(DAYOFWEEK FROM pickup_datetime) AS dow, -- 1= Sunday, ... 6= Saturday
-  EXTRACT(HOUR FROM pickup_datetime) AS hour,
-  ROUND(AVG(tip_amount),4) AS avg_tips,
-  ROUND(AVG(total_amount),4) AS avg_amount,
-  ROUND(AVG(trip_distance),4) AS avg_lenghth
-FROM famous-cache-463121-g6.nyc_taxi.vw_cleaned
-GROUP BY dow, hour
-ORDER BY dow, hour;
 
--- Analyze tip rate by by day of the week and hour
+-- Analyze Top 5 pick up locations by day of the week and hour
+WITH location AS(
+  SELECT
+   EXTRACT(DAYOFWEEK FROM pickup_datetime) AS dow, -- 1= Sunday, ... 6= Saturday
+   EXTRACT(HOUR FROM pickup_datetime) AS hour,
+   pickup_location_id,
+   COUNT(pickup_location_id) AS ride_total
+  FROM famous-cache-463121-g6.nyc_taxi.vw_cleaned
+  GROUP BY dow, hour, pickup_location_id
+  ORDER BY dow, hour
+)
 SELECT
-  EXTRACT(DAYOFWEEK FROM pickup_datetime) AS dow, -- 1= Sunday, ... 6= Saturday
-  EXTRACT(HOUR FROM pickup_datetime) AS hour,
-  SUM(tip_amount) AS total_tip,
-  SUM(total_amount) AS total_sales,
-  ROUND(AVG(tip_amount),4) AS avg_tips,
-  ROUND(SAFE_DIVIDE(SUM(tip_amount), SUM(total_amount)),4) AS tip_rate
-FROM famous-cache-463121-g6.nyc_taxi.vw_cleaned
-GROUP BY dow, hour
-ORDER BY dow, hour;
+  dow,
+  hour,
+  pickup_location_id,
+  ride_total,
+  RANK()OVER(PARTITION BY dow, hour ORDER BY ride_total DESC) AS rank
+FROM location
+QUALIFY rank <= 5
+ORDER BY dow, hour, rank;
