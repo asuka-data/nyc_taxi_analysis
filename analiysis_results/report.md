@@ -19,6 +19,7 @@
 - 2001_
 
 ### Total Ride Count by day of week and hour
+Grasp the overall trend by analyzing total rides by day of week and hour
 
 ```sql
  SELECT
@@ -48,9 +49,11 @@
 
 ```
 #### Short summary
-
+- **Evening Peak Hours**: Between 5-7pm on Weekdays are the peak for taxi demands
+- See more details in the file [heatmap.sql](sql/nyc_heatmap.sql)
 
 ### Popular Locations 
+Compare locations by total rides and find popular locations
 
 ```sql
 SELECT
@@ -76,3 +79,42 @@ LIMIT 10;
 
 ```
 #### Short summary
+- **Concentration of demand**: The demand is highly concentrated in the top four locations
+- **Standby Taxi**: For 237 and 132, there should be pooled some standby taxi for the immediate dispatch
+  
+### Comparison of Tip Rate by Day of Week and Hour
+Calculated tip rate to figure out high revenue day of week and hours,
+
+```sql
+SELECT
+  EXTRACT(DAYOFWEEK FROM pickup_datetime) AS dow, -- 1= Sunday, ... 6= Saturday
+  EXTRACT(HOUR FROM pickup_datetime) AS hour,
+  SUM(tip_amount) AS total_tip,
+  SUM(total_amount) AS total_sales,
+  ROUND(AVG(tip_amount),4) AS avg_tips,
+  ROUND(SAFE_DIVIDE(SUM(tip_amount), SUM(total_amount)),4) AS tip_rate
+FROM famous-cache-463121-g6.nyc_taxi.vw_cleaned
+GROUP BY dow, hour
+ORDER BY tip_rate DESC
+LIMIT 10;
+
+| Row | dow | hour | avg_tips | tip_rate |
+|-----|-----|------|----------|----------|
+| 1   | 3   | 21   | 2.8144   | 0.1357   |
+| 2   | 4   | 21   | 2.7982   | 0.1357   |
+| 3   | 4   | 22   | 2.8984   | 0.1353   |
+| 4   | 5   | 21   | 2.7885   | 0.1347   |
+| 5   | 5   | 22   | 2.8925   | 0.1347   |
+| 6   | 3   | 20   | 2.7058   | 0.1344   |
+| 7   | 4   | 20   | 2.7081   | 0.1342   |
+| 8   | 3   | 22   | 2.9006   | 0.1341   |
+| 9   | 2   | 21   | 2.8773   | 0.1335   |
+| 10  | 5   | 20   | 2.7049   | 0.1327   |
+
+```
+#### Short summary
+- **NIght hours**: The tip rate gets higher between 8-10pm
+
+## 4. Summary
+- Consider stable dispach for the peak hours and locations
+- Decrease the number of standby taxi for the low demand hours
