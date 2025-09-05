@@ -36,7 +36,7 @@ The goal for this analysis is to identify demands for taxi by many conditions an
 -  High demand occurs around 6 pm on weekdays.
 -  Demand is quite low from late night to early morning.
 -  Compared to weekdays, demand increases around midnight on weekends.
--  
+  
 
 ## Suggestions
 - **Late Night Rate (Only Friday to Sunday)** : Increase basic ride rate between 10pm - 2am for the high demand on weekend
@@ -44,10 +44,10 @@ The goal for this analysis is to identify demands for taxi by many conditions an
 - **Reservation System** : Decrease standby taxi from late night to early morning on weekdays, implement reservation system
 
 ##  Dashboard
-- Sample Visual
+- Sample Visual (Heatmap of rides by day of week and hour)
   ![nyc_taxi_Dashboard](analysis_results/img/Dashboard.png)
 - Tableau Public
-  [nyc_taxi_Dashboard](https://public.tableau.com/views/NYC_17570045665680/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+  [View Interactive Dashboard on Tableau Public](https://public.tableau.com/views/NYC_17570045665680/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ---
 
