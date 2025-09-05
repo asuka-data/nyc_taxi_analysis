@@ -33,8 +33,8 @@
  ORDER BY total_ride DESC
  LIMIT 10;
 
-| Row | dow | hour | total_ride |
-|-----|-----|------|------------|
+| Row | dow | hour | total_ride  |
+|-----|-----|------|------------ |
 | 1   | 3   | 18   | 398,211     |
 | 2   | 4   | 18   | 396,831     |
 | 3   | 5   | 18   | 394,306     |
@@ -45,6 +45,34 @@
 | 8   | 5   | 17   | 365,833     |
 | 9   | 4   | 19   | 359,585     |
 | 10  | 6   | 17   | 357,422     |
+
+```
+#### Short summary
+
+
+### Popular Locations 
+
+```sql
+SELECT
+  pickup_location_id,
+  COUNT(pickup_location_id) AS total
+FROM famous-cache-463121-g6.nyc_taxi.vw_cleaned
+GROUP BY pickup_location_id
+ORDER BY total DESC
+LIMIT 10;
+
+| Row | pickup_location_id | total    |
+|-----|--------------------|--------- |
+| 1   | 237                | 1678,029 |
+| 2   | 132                | 1677,109 |
+| 3   | 236                | 1493,435 |
+| 4   | 161                | 1430,746 |
+| 5   | 186                | 1169,058 |
+| 6   | 162                | 1163,670 |
+| 7   | 142                | 1161,036 |
+| 8   | 170                | 1101,208 |
+| 9   | 230                | 1099,473 |
+| 10  | 48                 | 1088,336 |
 
 ```
 #### Short summary
