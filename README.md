@@ -4,22 +4,25 @@
 This project analyzes NYC Taxi data to compare day of week, hour and locations. 
 The goal for this analysis is to identify demands for taxi by many conditions and provide insights for marketing strategies aimed at improving dispatch efficiency.
 
---
+---
 
 ## Data source
 - **new_york-taxi_trips.tlc_yellow_trips_2022**  [BigQuery](bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2022)
 
+---
 
 ##  Tools Used
 - **Google BigQuery**: Data cleaning, transformation, and analysis using SQL
 - **Tableau**: Data visualization and dashboard creation
 - **GitHub**: Version control and portfolio hosting
 
+---
 
 ## Data Range
 - 2001_01_01 - 2023_04_18
 - total rows: 36,256,539
 
+---
 
 ## Cleaning Rules
 - fare_amount < 1 and fare_amount > 200 : Invalid data
@@ -28,10 +31,15 @@ The goal for this analysis is to identify demands for taxi by many conditions an
 
 
 ## Key Insights
+-  High demands around 6 pm especially weekdays
+-  Demand is quite low from late night to early morning on weekdays
+-  Compared to weekdays, an increasing in demand is being observed around midmight on weekends
 
 
 ## Suggestions
-
+- **Late Night Rate (Only Friday to Sunday)** : Increase basic ride rate between 10pm - 2am for the high demand on weekend
+- **Monitor standby taxi** : Always dispatch vehicles to ensure at least one standby vehicle is available at location  and
+- **Reservation System** : Decrease standby taxi from late night to early morning on weekdays, implement reservation system
 
 ##  Dashboard
 ![nyc_taxi_Dashboard]()
