@@ -1,4 +1,4 @@
-# nyc_taxi_project
+# NYC Taxi Analysis
 
 ## Business Task
 This project analyzes NYC Taxi data to compare day of week, hour and locations. 
