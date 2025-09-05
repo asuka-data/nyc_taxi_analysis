@@ -40,7 +40,7 @@ The goal for this analysis is to identify demands for taxi by many conditions an
 
 ## Suggestions
 - **Late Night Rate (Only Friday to Sunday)** : Increase basic ride rate between 10pm - 2am for the high demand on weekend
-- **Monitor standby taxi** : Always dispatch vehicles to ensure at least one standby vehicle is available at location  and
+- **Monitor standby taxi** : Always dispatch vehicles to ensure at least one standby vehicle is available at location 236 and 237
 - **Reservation System** : Decrease standby taxi from late night to early morning on weekdays, implement reservation system
 
 ##  Dashboard
