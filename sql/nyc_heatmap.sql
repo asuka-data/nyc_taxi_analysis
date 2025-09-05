@@ -1,14 +1,23 @@
 -- Analyze demand by day of the week and hour
-SELECT
+WITH total_rides AS(
+ SELECT
   EXTRACT(DAYOFWEEK FROM pickup_datetime) AS dow, -- 1= Sunday, ... 6= Saturday
   EXTRACT(HOUR FROM pickup_datetime) AS hour,
   COUNT(*) AS total_ride
-FROM bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2022
-WHERE fare_amount BETWEEN 1 AND 200   -- Remove invalid and input error data
+ FROM bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2022
+ WHERE fare_amount BETWEEN 1 AND 200   -- Remove invalid and input error data
       AND trip_distance > 0
       AND tip_amount >= 0
-GROUP BY dow, hour
-ORDER BY dow, hour;
+ GROUP BY dow, hour
+)
+SELECT
+  dow,
+  hour,
+  total_ride,
+  RANK()OVER(PARTITION BY dow ORDER BY total_ride DESC) AS rank
+FROM total_rides
+QUALIFY rank <= 5
+ORDER BY dow,rank;
 
 
 -- Created cleaned VIEW that reflected cleaning data conditions
