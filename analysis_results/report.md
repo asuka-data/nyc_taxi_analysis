@@ -1,5 +1,6 @@
 ## NYC Taxi Data Cleaning & Analysis
 
+
 ## 1. Data Preperation
 - Review the data required for analysis 
 - Review data structures and ranges
