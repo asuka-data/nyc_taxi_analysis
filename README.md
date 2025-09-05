@@ -1,5 +1,7 @@
 # NYC Taxi Analysis
 
+---
+
 ## Business Task
 This project analyzes NYC Taxi data to compare day of week, hour and locations. 
 The goal for this analysis is to identify demands for taxi by many conditions and provide insights for marketing strategies aimed at improving dispatch efficiency.
