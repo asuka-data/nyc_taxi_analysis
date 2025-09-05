@@ -1,12 +1,19 @@
 # nyc_taxi_project
 
 ## Business Task
-The goal for this analysis is to figure out the peaks of demand and find the efficiency of deliverig taxi.
-By analyzing NYC taxi data, I will suggest the way to improve revenues.
+This project analyzes NYC Taxi data to compare day of week, hour and locations. 
+The goal for this analysis is to identify demands for taxi by many conditions and provide insights for marketing strategies aimed at improving dispatch efficiency.
 
+--
 
 ## Data source
 - **new_york-taxi_trips.tlc_yellow_trips_2022**  [BigQuery](bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2022)
+
+
+##  Tools Used
+- **Google BigQuery**: Data cleaning, transformation, and analysis using SQL
+- **Tableau**: Data visualization and dashboard creation
+- **GitHub**: Version control and portfolio hosting
 
 
 ## Data Range
@@ -24,4 +31,29 @@ By analyzing NYC taxi data, I will suggest the way to improve revenues.
 
 
 ## Suggestions
+
+
+##  Dashboard
+![nyc_taxi_Dashboard]()
+
+---
+
+## Repository Structure
+```
+nyc_taxi_project/
+├─ sql/
+│   ├─ nyc_heatmap.sql
+│   └─ nyc_tiprate.sql
+├─ analysis_results/
+│   ├─ report.md
+│   └─ img/
+│       ├─ heatmap_trips.png
+│       └─ heatmap_tiprate.png
+└─ README.md
+```
+
+---
+
+##  Contact
+Created by Asuka Osuki – [LinkedIn](www.linkedin.com/in/asuka-osuki-24958b32b) 
 
