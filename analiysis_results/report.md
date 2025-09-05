@@ -5,15 +5,18 @@
 - Review data structures and ranges
 - Define cleaning rules
 
+
 ## 2. Data Cleaning Steps
 - Excluded negative fares: `fare_amount` < 1
 - Excluded unusually high fares: `fare_amount` > 200
 - Excluded no trip data: `trip_distance` = 0
 - Excluded input error: `tip_amount` < 0
 
+
 ## 3. Data Exploration Summary
 ### Data Volume
 - Total Rows: **36,256,539 **
+
 
 ### Data Range
 - 2001_01_01 - 2023_04_18
@@ -114,6 +117,7 @@ LIMIT 10;
 ```
 #### Short summary
 - **NIght hours**: The tip rate gets higher between 8-10pm
+
 
 ## 4. Summary
 - Consider stable dispach for the peak hours and locations
