@@ -44,8 +44,7 @@ The goal for this analysis is to identify demands for taxi by many conditions an
 - **Reservation System** : Decrease standby taxi from late night to early morning on weekdays, implement reservation system
 
 ##  Dashboard
-![nyc_taxi_Dashboard](analiysis_results/img/heatmap_trips.png)
-
+![nyc_taxi_Dashboard](analiysis_results/img/Dashboard.png)
 ---
 
 ## Repository Structure
