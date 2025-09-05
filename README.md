@@ -33,10 +33,10 @@ The goal for this analysis is to identify demands for taxi by many conditions an
 
 
 ## Key Insights
--  High demands around 6 pm especially weekdays
--  Demand is quite low from late night to early morning on weekdays
--  Compared to weekdays, an increasing in demand is being observed around midmight on weekends
-
+-  High demand occurs around 6 pm on weekdays.
+-  Demand is quite low from late night to early morning.
+-  Compared to weekdays, demand increases around midnight on weekends.
+-  
 
 ## Suggestions
 - **Late Night Rate (Only Friday to Sunday)** : Increase basic ride rate between 10pm - 2am for the high demand on weekend
