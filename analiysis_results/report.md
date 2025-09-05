@@ -13,10 +13,10 @@
 
 ## 3. Data Exploration Summary
 ### Data Volume
-- Total Rows: ** **
+- Total Rows: **36,256,539 **
 
 ### Data Range
-- 2001_
+- 2001_01_01 - 2023_04_18
 
 ### Total Ride Count by day of week and hour
 Grasp the overall trend by analyzing total rides by day of week and hour
