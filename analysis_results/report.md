@@ -16,7 +16,7 @@
 
 ## 3. Data Exploration Summary
 ### Data Volume
-- Total Rows: **36,256,539 **
+- Total Rows: **36,256,539**
 
 
 ### Data Range
