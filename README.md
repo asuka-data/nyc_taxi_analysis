@@ -51,7 +51,7 @@ The goal for this analysis is to identify demands for taxi by many conditions an
 - Sample Visual (Heatmap of rides by day of week and hour)
   ![nyc_taxi_Dashboard](analysis_results/img/Dashboard.png)
 - Tableau Public
-  [View Interactive Dashboard on Tableau Public](https://public.tableau.com/views/NYC_17570045665680/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+  [View Interactive Dashboard on Tableau Public](https://public.tableau.com/views/NYC_17570045665680/Dashboard2?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ---
 
