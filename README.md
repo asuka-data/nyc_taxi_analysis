@@ -31,17 +31,21 @@ The goal for this analysis is to identify demands for taxi by many conditions an
 - trip_distance = 0 : No actual trip
 - tip-amount < 0 : Input error
 
+---
 
 ## Key Insights
 -  High demand occurs around 6 pm on weekdays.
 -  Demand is quite low from late night to early morning.
 -  Compared to weekdays, demand increases around midnight on weekends.
-  
+
+---
 
 ## Suggestions
 - **Late Night Rate (Only Friday to Sunday)** : Increase basic ride rate between 10pm - 2am for the high demand on weekend
 - **Monitor standby taxi** : Always dispatch vehicles to ensure at least one standby vehicle is available at location 236 and 237
 - **Reservation System** : Decrease standby taxi from late night to early morning on weekdays, implement reservation system
+
+---
 
 ##  Dashboard
 - Sample Visual (Heatmap of rides by day of week and hour)
