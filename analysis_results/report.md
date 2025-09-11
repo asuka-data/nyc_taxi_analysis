@@ -18,7 +18,6 @@
 ### Data Volume
 - Total Rows: **36,256,539**
 
-
 ### Data Range
 - 2001_01_01 - 2023_04_18
 
