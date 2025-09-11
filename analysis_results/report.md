@@ -53,7 +53,7 @@ Grasp the overall trend by analyzing total rides by day of week and hour
 ```
 #### Short summary
 - **Evening Peak Hours**: Between 5-7pm on Weekdays are the peak for taxi demands
-- See more details in the file [heatmap.sql](sql/nyc_heatmap.sql)
+- See more details in the file [heatmap.sql](/sql/nyc_heatmap.sql)
 
 ### Popular Locations 
 Compare locations by total rides and find popular locations
